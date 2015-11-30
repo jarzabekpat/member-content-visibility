@@ -64,6 +64,8 @@ namespace {
   /**
   * Necessary class to container element works
   */
-  class WPBakeryShortCode_member_container extends WPBakeryShortCodesContainer {
+  if ( class_exists( 'WPBakeryShortCodesContainer' ) ) {
+    class WPBakeryShortCode_member_container extends WPBakeryShortCodesContainer {
+    }
   }
 }

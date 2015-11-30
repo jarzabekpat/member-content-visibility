@@ -17,6 +17,7 @@ class VCMembersContainer {
     //load vc element after js_composer plugin is loaded
     add_action('plugins_loaded', function(){
       include ('vc-shortcodes.php');
+      
       VCShortcodes::init();
     });
   }
