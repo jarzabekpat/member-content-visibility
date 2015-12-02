@@ -10,8 +10,6 @@
  */
 namespace VCMembersContainer;
 
-include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-
 defined('ABSPATH') or die("No script kiddies please!");
 class VCMembersContainer {
 
@@ -23,15 +21,20 @@ class VCMembersContainer {
       VCShortcodes::init();  
       
     });
-      
+    
+    add_action( 'admin_init', array(__CLASS__, 'check_visual_composer_plugin' ));
+  }
+  
+  public static function check_visual_composer_plugin(){
     $plugin = "js_composer/js_composer.php";
     
-    /*if visual composer plugin is active, it is enabled the integration*/
+    /*if visual composer plugin is active, then it is enabled the integration*/
     if(is_plugin_active($plugin)){
       include ('vc-integration.php');
+      
+      VCIntegration::init();
     }
   }
-
 }
 
 VCMembersContainer::init();
