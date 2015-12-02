@@ -1,15 +1,14 @@
 <?php
-
-namespace VCMembersContainer {
+namespace MemberContentVisibility {
 
   class VCIntegration {
-  
+
     public static function init() {
       add_action('vc_before_init', array(__CLASS__, 'vc_integration_member_container'));
     }
 
     /**
-    * Funtion to integrate http method short code as a container in visual composer
+    * Funtion to integrate http method shortcode as a container in visual composer
     */
     public static function vc_integration_member_container() {
       vc_map( array(
@@ -38,13 +37,12 @@ namespace VCMembersContainer {
 }
 
 namespace {
-/**
-* Necessary class to container element works
-*/
-if ( class_exists( 'WPBakeryShortCodesContainer' ) ) {
-  class WPBakeryShortCode_member_container extends WPBakeryShortCodesContainer {
+  /**
+  * Necessary class to container element works
+  */
+  if ( class_exists( 'WPBakeryShortCodesContainer' ) ) {
+    class WPBakeryShortCode_member_container extends WPBakeryShortCodesContainer {
+    }
   }
-}
-
 }
 ?>
