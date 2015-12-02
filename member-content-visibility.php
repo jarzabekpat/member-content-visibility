@@ -10,6 +10,8 @@
  */
 namespace VCMembersContainer;
 
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+
 defined('ABSPATH') or die("No script kiddies please!");
 class VCMembersContainer {
 
@@ -18,8 +20,16 @@ class VCMembersContainer {
     add_action('plugins_loaded', function(){
       include ('vc-shortcodes.php');
       
-      VCShortcodes::init();
+      VCShortcodes::init();  
+      
     });
+      
+    $plugin = "js_composer/js_composer.php";
+    
+    /*if visual composer plugin is active, it is enabled the integration*/
+    if(is_plugin_active($plugin)){
+      include ('vc-integration.php');
+    }
   }
 
 }
