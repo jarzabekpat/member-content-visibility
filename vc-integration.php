@@ -1,38 +1,14 @@
 <?php
-namespace VCMembersContainer {
+namespace MemberContentVisibility {
 
-  class VCShortcodes {
+  class VCIntegration {
 
     public static function init() {
-      add_shortcode('member_container', array(__CLASS__, 'member_container_shortcode'));
       add_action('vc_before_init', array(__CLASS__, 'vc_integration_member_container'));
     }
 
     /**
-    * member container shortcode (Enclosing shortcode)
-    * atts:
-    *     - show: determine to who show the content
-    *             (possible values: members, non-members)
-    */
-    public static function member_container_shortcode($atts, $content = null) {
-      $atts = shortcode_atts( array(
-        'show' => 'members',
-      ), $atts);
-
-      switch ($atts['show']) {
-        case 'members':
-          if (is_user_logged_in())
-            return do_shortcode($content);
-          break;
-        case 'non-members':
-          if (!is_user_logged_in())
-            return do_shortcode($content);
-          break;
-      }
-    }
-
-    /**
-    * Funtion to integrate http method short code as a container in visual composer
+    * Funtion to integrate http method shortcode as a container in visual composer
     */
     public static function vc_integration_member_container() {
       vc_map( array(
@@ -64,6 +40,9 @@ namespace {
   /**
   * Necessary class to container element works
   */
-  class WPBakeryShortCode_member_container extends WPBakeryShortCodesContainer {
+  if ( class_exists( 'WPBakeryShortCodesContainer' ) ) {
+    class WPBakeryShortCode_member_container extends WPBakeryShortCodesContainer {
+    }
   }
 }
+?>
