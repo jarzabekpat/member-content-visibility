@@ -18,7 +18,7 @@ class VCMembersContainer {
     include ('shortcodes.php');
     Shortcodes::init();
 
-    add_action( 'admin_init', array(__CLASS__, 'check_visual_composer_plugin' ));
+    add_action('plugins_loaded', array(__CLASS__, 'check_visual_composer_plugin'));
   }
 
   public static function check_visual_composer_plugin(){
