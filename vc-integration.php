@@ -14,6 +14,8 @@ namespace MemberContentVisibility {
       vc_map( array(
         "name" => __("(non) Member Container", "vc-member-container"),
         "base" => "member_container",
+        "icon" => plugins_url('member-content-visibility')."/images/mcv_icon.jpg",
+        "class" => "",
         "description" => __('Insert content to show only to logged in or non-logged in users',
           'vc-member-container'),
         "as_parent" => array('except' => ''),
