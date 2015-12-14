@@ -21,7 +21,9 @@ class VCMembersContainer {
     add_action('plugins_loaded', array(__CLASS__, 'check_visual_composer_plugin'));
   }
 
-  public static function check_visual_composer_plugin(){
+  public static function check_visual_composer_plugin() {
+    //Necessary to is_plugin_active function exists
+    include_once(ABSPATH . 'wp-admin/includes/plugin.php');
     $plugin = "js_composer/js_composer.php";
 
     /*if visual composer plugin is active, then it is enabled the integration*/
