@@ -19,7 +19,7 @@ namespace MemberContentVisibility {
         "description" => __('Insert content to show only to logged in or non-logged in users',
           'vc-member-container'),
         "as_parent" => array('except' => ''),
-        "category" => __('Member Container', 'vc-member-container'),
+        "category" => __('Content', 'vc-member-container'),
         "params" => array(
           array(
             "type" => "dropdown",
