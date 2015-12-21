@@ -16,7 +16,7 @@ namespace MemberContentVisibility {
         "base" => "member_container",
         "icon" => plugins_url('member-content-visibility')."/images/mcv_icon.jpg",
         "class" => "",
-        "description" => __('Insert content to show only to logged in or non-logged in users',
+        "description" => __('Show content only to members or non-members',
           'vc-member-container'),
         "as_parent" => array('except' => ''),
         "category" => __('Content', 'vc-member-container'),
