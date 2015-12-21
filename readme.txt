@@ -1,11 +1,13 @@
 === Member Content Visibility ===
 Contributors: webilop
+Tags: visual composer, container, hide content
+Requires at least: 3.8
 Tested up to: 4.4
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add shortcode that allows to display content parts to logged in or non-logged in users. Also includes integration with visual composer.
+Add a shortcode that allows to display content parts to logged in or non-logged in users. Also includes integration with visual composer.
 
 == Description ==
 This plugin allows to display content sections only to logged in users, or only to non-logged in users.
@@ -24,3 +26,7 @@ If you have Visual Composer installed, an element called \"(non) Member Containe
 1. Visit Plugins > Add New
 2. Search for Member Content Visibility
 3. Activate Member Content Visibility from your Plugins page.
+
+== Changelog ==
+= 1 =
+* Initial version
