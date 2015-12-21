@@ -28,5 +28,5 @@ If you have Visual Composer installed, an element called \"(non) Member Containe
 3. Activate Member Content Visibility from your Plugins page.
 
 == Changelog ==
-= 1 =
+= 1.0 =
 * Initial version

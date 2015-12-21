@@ -2,9 +2,9 @@
 /**
  * Plugin Name: Member Content Visibility
  * Description: Add shortcode that allows to display content parts to logged in or non-logged in users. Also includes integration with visual composer
- * Version: 0.1
+ * Version: 1.0
  * Author: Webilop
- * Author URI: http://webilop.com
+ * Author URI: http://www.webilop.com
  * License: GPL2
  * Text Domain: vc-member-container
  */

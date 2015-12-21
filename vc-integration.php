@@ -29,7 +29,7 @@ namespace MemberContentVisibility {
               'Members' => 'members',
               'Non-members' => 'non-members'
             ),
-            "description" => __("Container to show content to members or non-members", "cloudexchange_documentation")
+            "description" => __("Container to show content to members or non-members", "vc-member-container")
           )
         ),
         "js_view" => 'VcColumnView'
