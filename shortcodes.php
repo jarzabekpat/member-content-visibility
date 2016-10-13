@@ -24,7 +24,7 @@ class Shortcodes {
           return do_shortcode($content);
         break;
       case 'non-members':
-        if (!is_user_logged_in())
+        if (!is_user_logged_in() || current_user_can('administrator')) // it allows an admin to see non-member content
           return do_shortcode($content);
         break;
     }
