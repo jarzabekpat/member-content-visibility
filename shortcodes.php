@@ -24,7 +24,7 @@ class Shortcodes {
           return do_shortcode($content);
         break;
       case 'non-members':
-        if (!is_user_logged_in())
+        f (!is_user_logged_in() || current_user_can('administrator'))
           return do_shortcode($content);
         break;
     }
